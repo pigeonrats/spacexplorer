@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Explorer Menu - CSS Pseudo-Classes Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        .tutorial-section {
+            background: #162447;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .nav-menu {
+            background: #1f4068;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Demo Menu Styles */
+        .nav-menu.demo a {
+            display: block;
+            padding: 10px;
+            margin: 5px;
+            background: #e43f5a;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        /* First set special background colors */
+        .nav-menu.demo a:first-child {
+            background: #4ecca3;
+        }
+
+        .nav-menu.demo a:last-child {
+            background: #7579e7;
+        }
+
+        .nav-menu.demo a:nth-child(2) {
+            background: #ffd369;
+            color: #000;
+        }
+
+        /* Then set interactive states that should work on ALL items */
+        .nav-menu.demo a:hover {
+            background: #ff6b6b;
+            transform: translateX(10px);
+        }
+
+        .nav-menu.demo a:active {
+            background: #c92a42 !important; /* Using !important to ensure active state always shows */
+        }
+
+        /* Practice Menu Styles */
+        .nav-menu.practice a {
+            display: block;
+            padding: 10px;
+            margin: 5px;
+            background: #f5f5f5;
+            color: #000;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+   .nav-menu.practice a:hover {
+    background-color: #57E1C1;
+    transform: translateX(10px);
+}
+
+.nav-menu.practice a:active {
+    background-color: #691A94 !important;
+}
+
+.nav-menu.practice a:first-child {
+    background-color: #94BD76;
+}
+
+.nav-menu.practice a:last-child {
+    background-color: #D7C545;
+}
+
+        code {
+            background: #2d3436;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #74b9ff;
+        }
+
+        .exercise {
+            background: #2c3e50;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .task-list {
+            background: #2c3e50;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .task-list li {
+            margin: 10px 0;
+        }
+
+        .code-template {
+            background: #2d3436;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre;
+        }
+
+        .important-note {
+            background: #e74c3c;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Space Explorer Menu Tutorial</h1>
+    <p>Welcome, space cadets! Today we'll learn about CSS pseudo-classes by creating an interactive space navigation menu.</p>
+
+    <div class="tutorial-section">
+        <h2>Step 1: The Demo Menu</h2>
+        <p>Here's our space exploration menu. Study how it behaves!</p>
+        
+        <nav class="nav-menu demo">
+            <a href="#">Mission Control</a>
+            <a href="#">Launch Pad</a>
+            <a href="#">Space Station</a>
+            <a href="#">Mars Colony</a>
+            <a href="#">Deep Space</a>
+        </nav>
+
+        <h3>What's Happening?</h3>
+        <ul>
+            <li><code>:hover</code> - Move your mouse over any link to see it slide right</li>
+            <li><code>:active</code> - Click and hold ANY link to see it turn dark red</li>
+            <li><code>:first-child</code> - Notice how "Mission Control" has a special green color</li>
+            <li><code>:last-child</code> - "Deep Space" has a unique purple color</li>
+            <li><code>:nth-child(2)</code> - "Launch Pad" has a yellow color</li>
+        </ul>
+    </div>
+
+    <div class="tutorial-section">
+        <h2>Step 2: Your Practice Menu</h2>
+        <p>Here's your practice menu. You'll add styles to make it interactive!</p>
+        
+        <nav class="nav-menu practice">
+            <a href="#">Mission Control</a>
+            <a href="#">Launch Pad</a>
+            <a href="#">Space Station</a>
+            <a href="#">Mars Colony</a>
+            <a href="#">Deep Space</a>
+        </nav>
+    </div>
+
+    <div class="tutorial-section">
+        <h2>✏️ Required Tasks</h2>
+        <div class="task-list">
+            <p><strong>Using the practice menu above, complete all of these tasks:</strong></p>
+            <ol>
+                <li>Add a <code>:hover</code> state that:
+                    <ul>
+                        <li>Changes the background color to a color of your choice</li>
+                        <li>Moves the element 10px to the right (use transform)</li>
+                    </ul>
+                </li>
+                <li>Add an <code>:active</code> state that:
+                    <ul>
+                        <li>Changes the background to a darker version of your hover color</li>
+                        <li>Add !important to make sure it works on all items</li>
+                    </ul>
+                </li>
+                <li>Style the <code>:first-child</code> to:
+                    <ul>
+                        <li>Have a unique background color</li>
+                        <li>Keep the black text color</li>
+                    </ul>
+                </li>
+                <li>Style the <code>:last-child</code> to:
+                    <ul>
+                        <li>Have a different unique background color</li>
+                        <li>Keep the black text color</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="important-note">
+                <strong>Important:</strong> To make sure the active state works on all items, including those with special colors, add !important to your active state like this:
+                <code>background-color: #your-color !important;</code>
+            </div>
+
+            <div class="code-template">
+/* Copy this template and fill in your colors and values */
+
+.nav-menu.practice a:hover {
+    background-color: /* your color */;
+    transform: translateX(10px);
+}
+
+.nav-menu.practice a:active {
+    background-color: /* your color */ !important;
+}
+
+.nav-menu.practice a:first-child {
+    background-color: /* your color */;
+}
+
+.nav-menu.practice a:last-child {
+    background-color: /* your color */;
+}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
